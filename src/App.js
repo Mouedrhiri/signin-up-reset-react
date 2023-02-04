@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Hello OFPPT</h1>
+      <div className='d-flex flex-column justify-content-around'>
+        <Link to='/signin'>
+          <input
+            className='btn btn-primary btn-md w-5'
+            value='Sign in'
+            type='button'
+          />
+        </Link>
+        <br />
+        <Link to='signup'>
+          <input className='btn btn-primary' value='Sign UP' type='button' />
+        </Link>
+        <br />
+        <Link to='reset'>
+          <input
+            className='btn btn-primary'
+            value='Reset Password'
+            type='button'
+          />
+        </Link>
+      </div>
     </div>
   );
 }
